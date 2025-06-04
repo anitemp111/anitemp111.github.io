@@ -2,19 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mini Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="dashboard">
+  <div id="lock-screen">
+    <h2>🔒 Enter Your 4-Digit PIN</h2>
+    <input type="password" id="pin-input" maxlength="4" />
+    <button id="unlock-btn">Unlock</button>
+    <p id="pin-status"></p>
+  </div>
+
+  <div class="dashboard hidden">
     <header>
-      <h1>Hello, <span id="username">Guest</span></h1>
+      <div class="user-info">
+        <img id="avatar" alt="avatar" />
+        <h1>Hello, <span id="username">Guest</span></h1>
+      </div>
       <button id="theme-toggle">🌙</button>
     </header>
 
     <section id="login-section">
       <input type="text" id="name-input" placeholder="Enter your name..." />
+      <input type="password" id="set-pin" maxlength="4" placeholder="Set 4-digit PIN" />
       <button id="save-name">Save</button>
     </section>
 
@@ -23,10 +34,20 @@
       <div id="weather">🌤️ Loading weather...</div>
     </section>
 
+    <section class="calendar">
+      <h2>📅 Calendar</h2>
+      <div id="calendar-grid"></div>
+    </section>
+
+    <section class="quote">
+      <h2>🧠 Quote of the Moment</h2>
+      <p id="quote-text">Loading...</p>
+    </section>
+
     <section class="todo">
       <h2>To-Do List</h2>
       <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="New task..." required>
+        <input type="text" id="todo-input" placeholder="New task..." required />
         <button>Add</button>
       </form>
       <ul id="todo-list"></ul>
@@ -35,6 +56,18 @@
     <section class="notes">
       <h2>Quick Notes</h2>
       <textarea id="note-area" placeholder="Write something..."></textarea>
+    </section>
+
+    <section class="music">
+      <h2>🎵 Music Player</h2>
+      <audio id="player" controls>
+        <source src="sample.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <section class="tips">
+      <h2>💡 Tip of the Day</h2>
+      <p id="tip"></p>
     </section>
   </div>
 
