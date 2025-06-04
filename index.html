@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>Hello, <span id="username">Guest</span></h1>
+      <button id="theme-toggle">🌙</button>
+    </header>
+
+    <section id="login-section">
+      <input type="text" id="name-input" placeholder="Enter your name..." />
+      <button id="save-name">Save</button>
+    </section>
+
+    <section class="clock-weather">
+      <div id="clock">--:--:--</div>
+      <div id="weather">🌤️ Loading weather...</div>
+    </section>
+
+    <section class="todo">
+      <h2>To-Do List</h2>
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="New task..." required>
+        <button>Add</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <section class="notes">
+      <h2>Quick Notes</h2>
+      <textarea id="note-area" placeholder="Write something..."></textarea>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
